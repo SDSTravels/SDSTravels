@@ -6,14 +6,18 @@
     <meta name="description" content="SDS Travels helps IT and corporate organizations move their teams with dependable employee transportation and managed shift commutes.">
     <title>SDS Travels | Corporate Employee Transportation</title>
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sdstravels.com/">
     <meta property="og:title" content="SDS Travels | Corporate Employee Transportation">
     <meta property="og:description" content="Dependable employee transportation and managed shift commutes for IT parks and corporate teams.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/SDSTravels/SDSTravels/main/assets/banner.png">
+    <meta property="og:image" content="https://sdstravels.com/assets/banner.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1536">
+    <meta property="og:image:height" content="1016">
     <meta property="og:image:alt" content="SDS Travels corporate transportation banner">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SDS Travels | Corporate Employee Transportation">
     <meta name="twitter:description" content="Dependable employee transportation and managed shift commutes for IT parks and corporate teams.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/SDSTravels/SDSTravels/main/assets/banner.png">
+    <meta name="twitter:image" content="https://sdstravels.com/assets/banner.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +34,7 @@
     <header class="site-header">
         <div class="container nav-wrap">
             <div class="brand">
-                <a class="brand-logo-link" href="assets/sds-logo-new.png" target="_blank" rel="noopener" aria-label="View the full-size SDS Travels logo">
+                <a class="brand-logo-link" href="assets/sds-logo-new.png" aria-label="View the full-size SDS Travels logo">
                     <img class="brand-logo" src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
                 </a>
                 <a class="brand-name" href="#home" aria-label="SDS Travels home">
@@ -196,7 +200,7 @@
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="brand footer-brand">
-                <a class="brand-logo-link" href="assets/sds-logo-new.png" target="_blank" rel="noopener" aria-label="View the full-size SDS Travels logo">
+                <a class="brand-logo-link" href="assets/sds-logo-new.png" aria-label="View the full-size SDS Travels logo">
                     <img class="brand-logo" src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
                 </a>
                 <a class="brand-name" href="#home" aria-label="SDS Travels home">
@@ -208,5 +212,21 @@
             <span>© 2026 SDS Travels</span>
         </div>
     </footer>
+    <dialog class="logo-preview" aria-label="SDS Travels logo preview">
+        <button class="logo-preview-close" type="button" aria-label="Close logo preview">×</button>
+        <img src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
+    </dialog>
+    <script>
+        const logoPreview = document.querySelector(".logo-preview");
+
+        document.querySelectorAll(".brand-logo-link").forEach((logoLink) => {
+            logoLink.addEventListener("click", (event) => {
+                event.preventDefault();
+                logoPreview.showModal();
+            });
+        });
+
+        logoPreview.addEventListener("click", () => logoPreview.close());
+    </script>
 </body>
 </html>
