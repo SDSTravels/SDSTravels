@@ -90,6 +90,21 @@ img {
     flex-shrink: 0;
 }
 
+.brand-logo-link {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    cursor: zoom-in;
+    line-height: 0;
+}
+
+.brand-logo-link:focus-visible {
+    outline: 2px solid var(--coral);
+    outline-offset: 3px;
+}
+
 .brand-logo {
     display: block;
     width: 84px;
