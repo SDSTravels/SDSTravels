@@ -1377,7 +1377,7 @@ body {
 .main-nav {
     gap: 0;
     margin-left: auto;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
 }
 
@@ -1458,7 +1458,7 @@ body {
 }
 
 .hero-visual > img {
-    object-position: center 56%;
+    object-position: center 78%;
 }
 
 .trust-bar {
@@ -1612,5 +1612,88 @@ body {
 
     .trust-item {
         min-height: 82px;
+    }
+}
+
+.nav-wrap {
+    min-height: 88px;
+}
+
+.brand-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.brand-name {
+    font-size: 15px;
+}
+
+.brand-name small {
+    font-size: 8px;
+}
+
+.main-nav .nav-proposal {
+    color: var(--coral);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    .nav-wrap {
+        flex-wrap: wrap;
+        padding-block: 10px;
+    }
+
+    .main-nav {
+        order: 0;
+        width: auto;
+        max-width: min(100%, 560px);
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .main-nav a {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav-wrap {
+        row-gap: 8px;
+    }
+
+    .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand-name {
+        max-width: calc(100vw - 120px);
+        font-size: 12px;
+    }
+
+    .brand-name small {
+        font-size: 7px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        max-width: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 0;
+    }
+
+    .main-nav a {
+        padding: 9px 5px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .main-nav .nav-proposal {
+        white-space: normal;
     }
 }
