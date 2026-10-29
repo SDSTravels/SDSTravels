@@ -1,11 +1,11 @@
 :root {
-    --ink: #0b2e46;
-    --muted: #66737b;
-    --paper: #fbfaf5;
+    --ink: #171717;
+    --muted: #686868;
+    --paper: #fff;
     --white: #fff;
-    --coral: #8c6b00;
-    --yellow: #f2d000;
-    --line: rgba(11, 46, 70, 0.14);
+    --coral: #ed4548;
+    --yellow: #ffe3e3;
+    --line: rgba(23, 23, 23, 0.14);
     --font-body: "DM Sans", sans-serif;
     --font-heading: "Manrope", sans-serif;
 }
@@ -217,7 +217,7 @@ img {
 }
 
 .button-dark:hover {
-    background: #2c4036;
+    background: #333;
 }
 
 .hero {
@@ -545,15 +545,15 @@ h2 em {
 }
 
 .service-coral {
-    background: #fff8d9;
+    background: #fff1f1;
 }
 
 .service-yellow {
-    background: #f5f0d9;
+    background: #fce8e8;
 }
 
 .service-lilac {
-    background: #e9edf0;
+    background: #f4f4f4;
 }
 
 .card-top {
@@ -573,7 +573,7 @@ h2 em {
     height: 28px;
     display: grid;
     place-items: center;
-    border: 1px solid rgba(11, 46, 70, 0.35);
+    border: 1px solid rgba(23, 23, 23, 0.35);
     border-radius: 50%;
     font-size: 13px;
 }
@@ -595,7 +595,7 @@ h2 em {
 .service-card > p {
     max-width: 290px;
     margin-bottom: 19px;
-    color: #536057;
+    color: #555;
     font-size: 11px;
     line-height: 1.7;
 }
@@ -606,7 +606,7 @@ h2 em {
     align-items: center;
     margin-top: auto;
     padding-top: 13px;
-    border-top: 1px solid rgba(11, 46, 70, 0.16);
+    border-top: 1px solid rgba(23, 23, 23, 0.16);
     font-size: 10px;
     font-weight: 700;
 }
@@ -617,8 +617,9 @@ h2 em {
 
 .about-section {
     overflow: hidden;
-    background: var(--ink);
-    color: #f8f7f2;
+    background: var(--white);
+    color: var(--ink);
+    border-block: 1px solid var(--line);
 }
 
 .about-grid {
@@ -658,7 +659,7 @@ h2 em {
 }
 
 .eyebrow-light {
-    color: #aebbb3;
+    color: var(--muted);
 }
 
 .about-copy {
@@ -677,25 +678,25 @@ h2 em {
 
 .about-copy h2 em,
 .contact-inner h2 em {
-    color: var(--yellow);
+    color: var(--coral);
 }
 
 .about-copy > p {
     max-width: 390px;
     margin-bottom: 24px;
-    color: #bbc4bd;
+    color: var(--muted);
     font-size: 12px;
     line-height: 1.8;
 }
 
 .button-outline {
     min-height: 42px;
-    border: 1px solid rgba(255, 255, 255, 0.42);
-    color: white;
+    border: 1px solid rgba(23, 23, 23, 0.42);
+    color: var(--ink);
 }
 
 .button-outline:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: #fff1f1;
 }
 
 .about-doodle {
@@ -752,8 +753,9 @@ h2 em {
 
 .contact-section {
     overflow: hidden;
-    background: var(--ink);
-    color: white;
+    background: var(--white);
+    color: var(--ink);
+    border-top: 1px solid var(--line);
 }
 
 .contact-inner {
@@ -767,7 +769,7 @@ h2 em {
 }
 
 .contact-inner .eyebrow > span {
-    background: var(--yellow);
+    background: var(--coral);
 }
 
 .contact-inner h2 {
@@ -781,24 +783,24 @@ h2 em {
 
 .contact-cta > p {
     margin-bottom: 19px;
-    color: rgba(255, 255, 255, 0.86);
+    color: var(--muted);
     font-size: 12px;
     line-height: 1.7;
 }
 
 .button-yellow {
-    background: var(--yellow);
-    color: var(--ink);
+    background: var(--coral);
+    color: var(--white);
 }
 
 .button-yellow:hover {
-    background: #ffdf45;
+    background: #d8373a;
 }
 
 .contact-phone {
     display: block;
     margin-top: 13px;
-    color: rgba(255, 255, 255, 0.87);
+    color: var(--muted);
     font-size: 10px;
 }
 
@@ -806,14 +808,15 @@ h2 em {
     position: absolute;
     right: 0;
     bottom: -37px;
-    color: rgba(255, 255, 255, 0.16);
+    color: rgba(23, 23, 23, 0.08);
     font-size: 190px;
     line-height: 1;
 }
 
 .site-footer {
-    background: #f1efe6;
+    background: var(--white);
     color: var(--ink);
+    border-top: 1px solid var(--line);
 }
 
 .footer-inner {
@@ -1330,5 +1333,284 @@ h2 em {
 
     .fleet-card-image {
         height: 230px;
+    }
+}
+
+body {
+    background: var(--white);
+}
+
+.container {
+    width: min(1280px, calc(100% - 48px));
+}
+
+.site-header {
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+    min-height: 76px;
+    gap: 20px;
+}
+
+.brand {
+    gap: 9px;
+}
+
+.brand-logo {
+    width: 48px;
+    height: 48px;
+}
+
+.brand-name {
+    font-size: 13px;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+.brand-name small {
+    margin-top: 4px;
+    font-size: 8px;
+    letter-spacing: 0.12em;
+}
+
+.main-nav {
+    gap: 0;
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.main-nav a {
+    padding: 8px 16px;
+    border-left: 1px solid var(--line);
+}
+
+.main-nav a:first-child {
+    border-left: 0;
+}
+
+.main-nav a:hover {
+    color: var(--coral);
+}
+
+.nav-cta {
+    min-height: 40px;
+    padding-inline: 15px;
+    background: var(--ink);
+    font-size: 11px;
+}
+
+.hero.container {
+    width: min(1000px, calc(100% - 40px));
+    display: block;
+    min-height: 0;
+    padding: 27px 0 12px;
+}
+
+.hero-copy {
+    padding: 0;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.06em;
+}
+
+.hero h1 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.hero-subtitle {
+    margin: 7px 0 20px;
+    color: var(--ink);
+    font-size: 15px;
+}
+
+.hero-description {
+    max-width: 720px;
+    margin-bottom: 10px;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.hero-description strong {
+    font-weight: 700;
+}
+
+.hero-actions {
+    gap: 18px;
+    margin-bottom: 14px;
+}
+
+.button-coral {
+    background: var(--coral);
+}
+
+.hero-visual {
+    height: clamp(300px, 37vw, 390px);
+    min-height: 0;
+    border-radius: 0;
+}
+
+.hero-visual > img {
+    object-position: center 56%;
+}
+
+.trust-bar {
+    width: min(1000px, calc(100% - 40px));
+    margin: 0 auto 30px;
+    padding: 10px;
+    border: 0;
+    background: #e8e8e8;
+}
+
+.trust-inner {
+    width: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.trust-item {
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    background: var(--white);
+    text-align: center;
+}
+
+.trust-item > span {
+    margin-bottom: 5px;
+    color: var(--coral);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.trust-item strong {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.trust-item small {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+@media (max-width: 800px) {
+    .nav-wrap {
+        flex-wrap: wrap;
+        padding-block: 10px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        padding: 4px 0 0;
+    }
+
+    .main-nav a {
+        padding-inline: clamp(8px, 3vw, 18px);
+    }
+
+    .nav-cta {
+        margin-left: auto;
+    }
+
+    .hero.container {
+        padding-top: 22px;
+    }
+
+    .hero-visual {
+        height: clamp(260px, 48vw, 360px);
+    }
+
+    .trust-inner {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    .hero.container,
+    .trust-bar {
+        width: calc(100% - 32px);
+    }
+
+    .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .brand-name {
+        font-size: 12px;
+    }
+
+    .nav-cta {
+        min-height: 36px;
+        padding-inline: 10px;
+        font-size: 9px;
+    }
+
+    .main-nav {
+        justify-content: space-between;
+    }
+
+    .main-nav a {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+
+    .hero.container {
+        padding-top: 20px;
+    }
+
+    .hero h1 {
+        max-width: 460px;
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .hero-subtitle {
+        margin-bottom: 13px;
+        font-size: 13px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-visual {
+        height: 250px;
+    }
+
+    .trust-bar {
+        padding: 7px;
+    }
+
+    .trust-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .trust-item {
+        min-height: 82px;
     }
 }
