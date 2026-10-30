@@ -522,11 +522,42 @@ h2 em {
     letter-spacing: -0.07em;
 }
 
-.section-heading > p {
+.section-heading > p,
+.section-intro > p {
     max-width: 280px;
     margin-bottom: 5px;
     color: var(--muted);
     font-size: 13px;
+    line-height: 1.7;
+}
+
+.section-intro {
+    max-width: 280px;
+    display: grid;
+    justify-items: start;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.section-intro > p {
+    margin: 0;
+}
+
+#about .about-home-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#about .section-intro {
+    width: 100%;
+    max-width: none;
+    gap: 22px;
+}
+
+#about .section-intro > p {
+    max-width: 100%;
+    font-size: 15px;
     line-height: 1.7;
 }
 
@@ -666,6 +697,7 @@ h2 em {
     padding-block: 20px;
 }
 
+.about-copy h1,
 .about-copy h2,
 .contact-inner h2 {
     margin: 20px 0 17px;
@@ -675,6 +707,7 @@ h2 em {
     letter-spacing: -0.07em;
 }
 
+.about-copy h1 em,
 .about-copy h2 em,
 .contact-inner h2 em {
     color: var(--yellow);
@@ -696,6 +729,11 @@ h2 em {
 
 .button-outline:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+.about-page-cta {
+    margin-top: 36px;
+    text-align: center;
 }
 
 .about-doodle {
@@ -1063,9 +1101,14 @@ h2 em {
         font-size: 39px;
     }
 
-    .section-heading > p {
+    .section-heading > p,
+    .section-intro > p {
         margin-top: 15px;
         font-size: 12px;
+    }
+
+    .section-intro {
+        margin-top: 15px;
     }
 
     .service-grid {
@@ -1103,6 +1146,7 @@ h2 em {
         font-size: 8px;
     }
 
+    .about-copy h1,
     .about-copy h2,
     .contact-inner h2 {
         font-size: 45px;

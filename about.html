@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about SDS Travels and our corporate employee transportation services.">
+    <title>About Us | SDS Travels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <div class="brand">
+                <button class="brand-logo-link" type="button" aria-label="View the full-size SDS Travels logo">
+                    <img class="brand-logo" src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
+                </button>
+                <a class="brand-name" href="index.html#home" aria-label="SDS Travels home">
+                    <span class="brand-title">Sri Divya Sai Travels Private Limited</span>
+                    <small>Corporate Employee Transportation</small>
+                </a>
+            </div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html#home">Home</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#sustainability">Sustainability</a>
+                <a href="index.html#technology">Technology</a>
+                <a class="book-online-link" href="mailto:info@sdstravels.com?subject=Corporate%20transport%20booking%20request">Book Online</a>
+                <details class="nav-more">
+                    <summary>More <span aria-hidden="true">⌄</span></summary>
+                    <div class="nav-more-menu">
+                        <a href="index.html#fleet">Fleet</a>
+                        <a href="index.html#contact">Contact</a>
+                        <a href="mailto:info@sdstravels.com?subject=Corporate%20transport%20proposal">Request a proposal</a>
+                    </div>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Colleagues working together in a modern office">
+                    <div class="image-label">YOUR PEOPLE COME FIRST <span aria-hidden="true">✳</span></div>
+                </div>
+                <div class="about-copy">
+                    <div class="eyebrow eyebrow-light"><span></span> ABOUT SRI DIVYA SAI TRAVELS</div>
+                    <h1>About <em>SDS Travels.</em></h1>
+                    <p>Learn more about Sri Divya Sai Travels and our work in corporate employee transportation, premium car rentals, and coordinated fleet services.</p>
+                    <a class="button button-outline" href="index.html#services">Explore our services <span aria-hidden="true">↗</span></a>
+                    <span class="about-doodle" aria-hidden="true">✳</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section container">
+            <div class="section-heading">
+                <div>
+                    <div class="eyebrow"><span></span> SDS TRAVELS AT A GLANCE</div>
+                    <h2>Moving teams<br><em>forward, together.</em></h2>
+                </div>
+                <p>Corporate employee transportation, coordinated around the needs of your business and your people.</p>
+            </div>
+            <div class="mobility-grid">
+                <article class="mobility-card">
+                    <span class="mobility-number">01</span>
+                    <h3>Employee transport</h3>
+                    <p>Commute services planned around office locations, employee routes, and shift schedules.</p>
+                </article>
+                <article class="mobility-card">
+                    <span class="mobility-number">02</span>
+                    <h3>Corporate cars</h3>
+                    <p>Vehicle options for employee commutes, office travel, and business transport needs.</p>
+                </article>
+                <article class="mobility-card">
+                    <span class="mobility-number">03</span>
+                    <h3>Fleet coordination</h3>
+                    <p>Coordination of fleet options and transport plans to support daily operations.</p>
+                </article>
+            </div>
+            <div class="about-page-cta">
+                <a class="button button-coral" href="index.html#contact">Contact Us <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="brand footer-brand">
+                <button class="brand-logo-link" type="button" aria-label="View the full-size SDS Travels logo">
+                    <img class="brand-logo" src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
+                </button>
+                <a class="brand-name" href="index.html#home" aria-label="SDS Travels home">
+                    <span class="brand-title">Sri Divya Sai Travels Private Limited</span>
+                    <small>Corporate Employee Transportation</small>
+                </a>
+            </div>
+            <p>Moving teams forward, together.</p>
+            <span>© 2026 SDS Travels</span>
+        </div>
+    </footer>
+    <dialog class="logo-preview" aria-label="SDS Travels logo preview">
+        <button class="logo-preview-close" type="button" aria-label="Close logo preview">×</button>
+        <img src="assets/sds-logo-new.png" alt="Sri Divya Sai Travels Pvt Ltd logo">
+    </dialog>
+    <script>
+        const logoPreview = document.querySelector(".logo-preview");
+
+        document.querySelectorAll(".brand-logo-link").forEach((logoButton) => {
+            logoButton.addEventListener("click", () => logoPreview.showModal());
+        });
+
+        logoPreview.addEventListener("click", () => logoPreview.close());
+    </script>
+</body>
+</html>
