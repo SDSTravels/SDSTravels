@@ -1510,13 +1510,6 @@ body {
     line-height: 1.4;
 }
 
-.trust-item-note {
-    margin-top: 3px;
-    color: var(--muted);
-    font-size: 10px;
-    line-height: 1.35;
-}
-
 @media (max-width: 800px) {
     .nav-wrap {
         flex-wrap: wrap;
@@ -2122,9 +2115,5 @@ body {
 
     .trust-item small {
         font-size: 10px;
-    }
-
-    .trust-item-note {
-        font-size: 9px;
     }
 }
