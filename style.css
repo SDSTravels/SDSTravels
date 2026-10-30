@@ -1697,3 +1697,227 @@ body {
         white-space: normal;
     }
 }
+
+.main-nav {
+    font-size: 13px;
+}
+
+.main-nav > a,
+.nav-more > summary {
+    padding: 8px 14px;
+}
+
+.main-nav .book-online-link {
+    color: var(--coral);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-more {
+    position: relative;
+    border-left: 1px solid var(--line);
+}
+
+.nav-more > summary {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.nav-more > summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-more > summary span {
+    margin-left: 3px;
+    color: var(--coral);
+}
+
+.nav-more[open] > summary {
+    color: var(--coral);
+}
+
+.nav-more-menu {
+    min-width: 190px;
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 10px);
+    right: 0;
+    display: grid;
+    padding: 7px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.main-nav .nav-more-menu a {
+    padding: 11px 12px;
+    border: 0;
+    white-space: nowrap;
+}
+
+.nav-more-menu a:hover {
+    background: #fff1f1;
+    color: var(--coral);
+}
+
+.sustainability-section {
+    padding-top: 85px;
+    padding-bottom: 90px;
+}
+
+.mobility-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.mobility-card {
+    min-height: 190px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: var(--white);
+}
+
+.mobility-number {
+    color: var(--coral);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mobility-card h3 {
+    margin: 20px 0 8px;
+    font-size: 18px;
+}
+
+.mobility-card p,
+.technology-steps p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.technology-section {
+    padding-block: 84px;
+    background: #f5f5f5;
+}
+
+.technology-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 10%;
+}
+
+.technology-copy h2 {
+    margin: 18px 0 14px;
+    font-size: clamp(36px, 4vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.07em;
+}
+
+.technology-copy h2 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.technology-copy > p {
+    max-width: 440px;
+    margin-bottom: 22px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.technology-steps {
+    display: grid;
+    gap: 12px;
+}
+
+.technology-steps article {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 18px;
+    border: 1px solid var(--line);
+    background: var(--white);
+}
+
+.technology-steps article > span {
+    color: var(--coral);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.technology-steps h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .nav-wrap {
+        flex-wrap: wrap;
+        padding-block: 10px;
+        row-gap: 8px;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .technology-inner {
+        gap: 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        justify-content: stretch;
+        gap: 0;
+    }
+
+    .main-nav > a,
+    .nav-more > summary {
+        padding: 9px 5px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .nav-more-menu {
+        right: 0;
+    }
+
+    .mobility-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .mobility-card {
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .mobility-card h3 {
+        margin-top: 12px;
+    }
+
+    .sustainability-section {
+        padding-block: 65px;
+    }
+
+    .technology-section {
+        padding-block: 64px;
+    }
+
+    .technology-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
