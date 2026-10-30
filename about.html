@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about SDS Travels and our corporate employee transportation services.">
     <title>About Us | SDS Travels</title>
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -171,7 +172,7 @@
                     <div class="eyebrow eyebrow-light"><span></span> OUR COMMITMENT</div>
                     <h2>Care in every detail.<br><em>Confidence in every journey.</em></h2>
                 </div>
-                <a class="button button-yellow" href="https://wa.me/917377477773?text=Greetings%20from%20Sri%20Divya%20Sai%20Travels!%20How%20can%20we%20help%20you%3F" target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
+                <a class="button button-yellow" href="https://wa.me/917377477773?text=Hi%2C%20I%20want%20to%20connect%20with%20you%20regarding%20your%20service" target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
             </div>
         </section>
     </main>
@@ -204,10 +205,30 @@
 
         logoPreview.addEventListener("click", () => logoPreview.close());
 
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const revealTargets = document.querySelectorAll(
+            ".about-hero-copy, .about-hero-visual, .fleet-showcase-heading, .fleet-showcase-card, .leadership-heading, .leader-card, .about-commitment-inner"
+        );
+        const revealTarget = (target) => target.classList.add("is-revealed");
+
+        if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+            revealTargets.forEach(revealTarget);
+        } else {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        revealTarget(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
+
+            revealTargets.forEach((target) => revealObserver.observe(target));
+        }
+
         const vehicleSlideshow = document.querySelector("[data-vehicle-slideshow]");
         const vehicleSlides = [...vehicleSlideshow.querySelectorAll(".about-hero-slide")];
         const vehicleSlideButtons = [...vehicleSlideshow.querySelectorAll(".about-hero-dots button")];
-        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
         let activeVehicleSlide = 0;
         let vehicleSlideTimer;
 
