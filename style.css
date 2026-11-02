@@ -2803,12 +2803,23 @@ body {
     margin-bottom: 30px;
 }
 
-.why-choose-heading h2 {
-    margin: 14px 0 0;
+.why-choose-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
     font-size: clamp(36px, 4vw, 49px);
     font-weight: 700;
     line-height: 1.13;
     letter-spacing: -0.07em;
+}
+
+.why-choose-title span {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: var(--coral);
 }
 
 .why-choose-heading h3 {
@@ -2888,7 +2899,7 @@ body {
         margin-bottom: 22px;
     }
 
-    .why-choose-heading h2 {
+    .why-choose-title {
         font-size: 39px;
     }
 
