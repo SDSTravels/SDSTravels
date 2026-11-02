@@ -511,6 +511,25 @@ h2 em {
     margin-bottom: 42px;
 }
 
+#about .section-heading h2,
+#services .fleet-showcase-heading h2,
+.why-choose-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#about .section-heading h2::before,
+#services .fleet-showcase-heading h2::before,
+.why-choose-title::before {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 9px;
+    border-radius: 50%;
+    background: var(--coral);
+    content: "";
+}
+
 .section-heading h2 {
     margin: 16px 0 0;
     font-size: clamp(36px, 4vw, 49px);
@@ -2680,6 +2699,291 @@ body {
     font-size: 15px;
 }
 
+.services-hero {
+    overflow: hidden;
+    padding-block: 70px;
+    background: #f3f7fc;
+}
+
+.services-hero-inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 48px;
+}
+
+.services-hero-copy h1 {
+    margin: 18px 0 16px;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.04;
+    letter-spacing: -0.075em;
+}
+
+.services-hero-copy h1 em,
+.service-detail-copy h2 em,
+.services-commitment h2 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.services-hero-copy > p {
+    max-width: 470px;
+    margin-bottom: 25px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.services-hero-visual,
+.service-detail-visual {
+    min-height: 390px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(140deg, #0d397f, #071f50);
+}
+
+.services-hero-visual img,
+.service-detail-visual img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center 68%;
+    transition: transform 450ms ease;
+}
+
+.services-hero-visual:hover img,
+.service-detail-visual:hover img {
+    transform: scale(1.045);
+}
+
+.services-hero-visual::after,
+.service-detail-visual::after {
+    position: absolute;
+    inset: 50% 0 0;
+    background: linear-gradient(180deg, transparent, rgba(4, 24, 64, 0.68));
+    content: "";
+}
+
+.services-hero-visual > span,
+.service-detail-index {
+    position: absolute;
+    z-index: 1;
+    bottom: 23px;
+    left: 25px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.service-detail-section {
+    padding-block: 82px;
+    background: #fff;
+}
+
+.service-detail-alt {
+    background: #f7f9fc;
+}
+
+.service-detail-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: clamp(38px, 6vw, 86px);
+}
+
+.service-detail-alt .service-detail-visual {
+    order: 2;
+}
+
+.service-detail-visual {
+    min-height: 440px;
+}
+
+.service-detail-copy h2 {
+    margin: 15px 0 20px;
+    font-size: clamp(36px, 4vw, 50px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.07em;
+}
+
+.service-detail-copy > p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.service-detail-copy ul {
+    display: grid;
+    gap: 10px;
+    margin: 20px 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.service-detail-copy li {
+    position: relative;
+    padding-left: 22px;
+    color: var(--ink);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.service-detail-copy li::before {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    border-radius: 50%;
+    background: var(--coral);
+    content: "";
+}
+
+.rental-experience {
+    margin-top: 76px;
+    padding: clamp(24px, 4vw, 46px);
+    background: #f3f7fc;
+}
+
+.rental-experience-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 27px;
+}
+
+.rental-experience-heading h3 {
+    margin: 13px 0 0;
+    font-size: clamp(28px, 3.2vw, 39px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.065em;
+}
+
+.rental-experience-heading h3 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.rental-experience-heading > p {
+    max-width: 370px;
+    margin: 0 0 3px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.rental-range-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.rental-range-card {
+    min-height: 190px;
+    padding: 23px 21px;
+    border: 1px solid rgba(8, 44, 112, 0.1);
+    background: #fff;
+}
+
+.rental-range-featured {
+    color: #fff;
+    border-color: #082c70;
+    background: #082c70;
+}
+
+.rental-range-label {
+    display: block;
+    margin-bottom: 24px;
+    color: var(--coral);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+}
+
+.rental-range-featured .rental-range-label {
+    color: #57d8eb;
+}
+
+.rental-range-card h4 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    letter-spacing: -0.04em;
+}
+
+.rental-range-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.rental-range-featured p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.rental-availability {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.services-commitment {
+    padding-block: 48px;
+    color: #fff;
+    background: #082c70;
+}
+
+.services-commitment-inner {
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.services-commitment h2 {
+    margin: 15px 0 0;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -0.065em;
+}
+
+.services-commitment h2 em {
+    color: #f7cc62;
+}
+
+.js [data-service-reveal] {
+    opacity: 0;
+}
+
+[data-service-reveal].is-revealed {
+    animation: about-section-enter 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.service-detail-copy.is-revealed,
+.services-hero-copy.is-revealed {
+    animation-name: about-heading-enter;
+}
+
+.services-hero-visual.is-revealed,
+.service-detail-visual.is-revealed {
+    animation-name: about-card-enter;
+}
+
+.services-hero-visual.is-revealed img,
+.service-detail-visual.is-revealed img {
+    animation: about-image-enter 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
 .happy-clients-section {
     padding-block: 58px 64px;
     background: #fff;
@@ -2804,9 +3108,6 @@ body {
 }
 
 .why-choose-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     margin: 0;
     font-size: clamp(36px, 4vw, 49px);
     font-weight: 700;
@@ -3017,6 +3318,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .js .about-hero-copy,
     .js .about-hero-visual,
+    .js [data-service-reveal],
     .js .fleet-showcase-heading,
     .js .fleet-showcase-card,
     .js .leadership-heading,
@@ -3025,20 +3327,117 @@ body {
     .about-hero-slide img,
     .fleet-art img,
     .leader-photo img,
-    .about-commitment-inner {
+    .about-commitment-inner,
+    [data-service-reveal].is-revealed,
+    .services-hero-visual.is-revealed img,
+    .service-detail-visual.is-revealed img {
         animation: none;
         opacity: 1;
     }
 
     .about-hero-slide img,
+    .services-hero-visual img,
+    .service-detail-visual img,
     .fleet-art img,
     .leader-photo img {
         transition: none;
     }
 
     .about-hero-visual:hover .about-hero-slide.is-active img,
+    .services-hero-visual:hover img,
+    .service-detail-visual:hover img,
     .fleet-art:hover img,
     .leader-photo:hover img {
         transform: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .services-hero-inner,
+    .service-detail-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-hero-inner {
+        gap: 36px;
+    }
+
+    .service-detail-alt .service-detail-visual {
+        order: 0;
+    }
+
+    .services-hero-visual,
+    .service-detail-visual {
+        min-height: 360px;
+    }
+
+    .rental-experience {
+        margin-top: 54px;
+    }
+
+    .rental-experience-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .rental-range-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rental-range-card {
+        min-height: 0;
+    }
+
+    .rental-range-label {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-hero {
+        padding-block: 48px;
+    }
+
+    .services-hero-copy h1 {
+        font-size: 42px;
+    }
+
+    .services-hero-copy > p {
+        font-size: 13px;
+    }
+
+    .services-hero-visual,
+    .service-detail-visual {
+        min-height: 270px;
+    }
+
+    .service-detail-section {
+        padding-block: 52px;
+    }
+
+    .service-detail-copy h2 {
+        font-size: 36px;
+    }
+
+    .service-detail-copy > p {
+        font-size: 13px;
+    }
+
+    .rental-experience {
+        margin-top: 40px;
+        padding: 22px 18px;
+    }
+
+    .rental-experience-heading h3 {
+        font-size: 29px;
+    }
+
+    .services-commitment-inner {
+        min-height: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        padding-block: 12px;
     }
 }
