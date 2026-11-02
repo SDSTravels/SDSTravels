@@ -372,8 +372,7 @@ h2 em {
 }
 
 .hero-visual > img,
-.about-image img,
-.fleet-image img {
+.about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -501,8 +500,7 @@ h2 em {
 }
 
 .section {
-    padding-top: 105px;
-    padding-bottom: 110px;
+    padding-block: 74px;
 }
 
 .section-heading {
@@ -513,8 +511,7 @@ h2 em {
     margin-bottom: 42px;
 }
 
-.section-heading h2,
-.fleet-copy h2 {
+.section-heading h2 {
     margin: 16px 0 0;
     font-size: clamp(36px, 4vw, 49px);
     font-weight: 700;
@@ -653,12 +650,12 @@ h2 em {
 }
 
 .about-grid {
-    min-height: 470px;
+    min-height: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 9%;
-    padding-block: 72px;
+    padding-block: 56px;
 }
 
 .about-image {
@@ -742,50 +739,6 @@ h2 em {
     bottom: -46px;
     color: var(--coral);
     font-size: 46px;
-}
-
-.fleet-section {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    align-items: center;
-    gap: 8%;
-    padding-top: 105px;
-    padding-bottom: 110px;
-}
-
-.fleet-copy > p {
-    max-width: 380px;
-    margin: 20px 0 20px;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.8;
-}
-
-.fleet-image {
-    height: 310px;
-    position: relative;
-    background: #e2e2dc;
-}
-
-.fleet-image img {
-    object-position: center 56%;
-}
-
-.fleet-tag {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    padding: 10px 12px;
-    background: var(--white);
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-}
-
-.fleet-tag span {
-    margin-right: 6px;
-    color: var(--coral);
-    font-size: 13px;
 }
 
 .contact-section {
@@ -1036,9 +989,8 @@ h2 em {
         width: calc(50% - 15px);
     }
 
-    .section,
-    .fleet-section {
-        padding-block: 75px;
+    .section {
+        padding-block: 62px;
     }
 
     .service-grid {
@@ -1060,14 +1012,6 @@ h2 em {
 
     .about-image {
         height: 300px;
-    }
-
-    .fleet-section {
-        gap: 5%;
-    }
-
-    .fleet-image {
-        height: 270px;
     }
 
     .contact-cta {
@@ -1187,7 +1131,7 @@ h2 em {
     }
 
     .section {
-        padding-block: 70px;
+        padding-block: 54px;
     }
 
     .section-heading {
@@ -1195,8 +1139,7 @@ h2 em {
         margin-bottom: 27px;
     }
 
-    .section-heading h2,
-    .fleet-copy h2 {
+    .section-heading h2 {
         font-size: 39px;
     }
 
@@ -1257,16 +1200,6 @@ h2 em {
         font-size: 34px;
     }
 
-    .fleet-section {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        padding-block: 70px;
-    }
-
-    .fleet-image {
-        height: 245px;
-    }
-
     .contact-inner {
         min-height: 0;
         display: block;
@@ -1288,113 +1221,6 @@ h2 em {
         gap: 36px;
         padding-block: 42px;
     }
-}
-
-.fleet-intro {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 34px;
-}
-
-.fleet-intro .fleet-copy h2 {
-    margin-top: 16px;
-}
-
-.fleet-copy > p {
-    max-width: 480px;
-    margin-bottom: 0;
-}
-
-.fleet-link {
-    flex-shrink: 0;
-    margin-bottom: 5px;
-}
-
-.fleet-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.fleet-card {
-    min-width: 0;
-    background: var(--white);
-    border: 1px solid var(--line);
-}
-
-.fleet-card-image {
-    height: 235px;
-    position: relative;
-    overflow: hidden;
-    background: #e4e8e8;
-}
-
-.fleet-card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 300ms ease;
-}
-
-.fleet-card:hover .fleet-card-image img {
-    transform: scale(1.035);
-}
-
-.fleet-card-image .fleet-tag {
-    right: 12px;
-    bottom: 12px;
-    padding: 9px 11px;
-    background: var(--white);
-    color: var(--ink);
-    font-size: 8px;
-}
-
-.fleet-card-copy {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 18px 17px 0;
-}
-
-.fleet-category {
-    color: var(--muted);
-    font-size: 8px;
-    font-weight: 700;
-    letter-spacing: 0.13em;
-}
-
-.fleet-card-copy h3 {
-    margin: 5px 0 0;
-    font-size: 17px;
-    letter-spacing: -0.04em;
-}
-
-.fleet-arrow {
-    width: 29px;
-    height: 29px;
-    display: grid;
-    place-items: center;
-    flex-shrink: 0;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    color: var(--coral);
-}
-
-.fleet-card > p {
-    margin: 8px 17px 18px;
-    color: var(--muted);
-    font-size: 10px;
-    line-height: 1.6;
-}
-
-.fleet-note {
-    margin: 15px 0 0;
-    color: var(--muted);
-    font-size: 10px;
 }
 
 .logo-preview {
@@ -1434,45 +1260,6 @@ h2 em {
     font-size: 22px;
     line-height: 1;
     cursor: pointer;
-}
-
-@media (max-width: 800px) {
-    .fleet-gallery {
-        gap: 12px;
-    }
-
-    .fleet-card-image {
-        height: 185px;
-    }
-
-    .fleet-card-copy {
-        padding-inline: 12px;
-    }
-
-    .fleet-card > p {
-        margin-inline: 12px;
-    }
-}
-
-@media (max-width: 600px) {
-    .fleet-intro {
-        display: block;
-        margin-bottom: 25px;
-    }
-
-    .fleet-link {
-        display: inline-block;
-        margin-top: 17px;
-    }
-
-    .fleet-gallery {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-
-    .fleet-card-image {
-        height: 230px;
-    }
 }
 
 body {
@@ -1849,8 +1636,6 @@ body {
 }
 
 .main-nav .book-online-link {
-    color: var(--coral);
-    font-weight: 700;
     white-space: nowrap;
 }
 
@@ -1904,8 +1689,7 @@ body {
 }
 
 .sustainability-section {
-    padding-top: 85px;
-    padding-bottom: 90px;
+    padding-block: 62px;
 }
 
 .mobility-grid {
@@ -1941,7 +1725,7 @@ body {
 }
 
 .technology-section {
-    padding-block: 84px;
+    padding-block: 64px;
     background: #edf5ff;
 }
 
@@ -2049,12 +1833,8 @@ body {
         margin-top: 12px;
     }
 
-    .sustainability-section {
-        padding-block: 65px;
-    }
-
     .technology-section {
-        padding-block: 64px;
+        padding-block: 54px;
     }
 
     .technology-inner {
@@ -2738,7 +2518,7 @@ body {
 }
 
 .fleet-showcase {
-    padding-block: 96px 104px;
+    padding-block: 60px 68px;
     background: #f3f7fc;
 }
 
@@ -2751,12 +2531,12 @@ body {
 }
 
 .fleet-showcase-heading .eyebrow {
-    margin-bottom: 17px;
+    margin-bottom: 10px;
 }
 
 .fleet-showcase-heading h2 {
     margin: 0;
-    font-size: clamp(36px, 4vw, 52px);
+    font-size: clamp(36px, 4vw, 49px);
     font-weight: 700;
     line-height: 1.12;
     letter-spacing: -0.07em;
@@ -2900,9 +2680,45 @@ body {
     font-size: 15px;
 }
 
+.happy-clients-section {
+    padding-block: 58px 64px;
+    background: #fff;
+}
+
+.happy-clients-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 36px;
+    margin-bottom: 24px;
+}
+
+.happy-clients-heading h2 {
+    margin: 14px 0 0;
+    font-size: clamp(36px, 4vw, 49px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -0.07em;
+}
+
+.happy-clients-heading > p {
+    max-width: 390px;
+    margin: 0 0 5px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.happy-clients-image {
+    width: min(100%, 1000px);
+    height: auto;
+    display: block;
+    margin-inline: auto;
+}
+
 @media (max-width: 800px) {
     .fleet-showcase {
-        padding-block: 74px;
+        padding-block: 54px;
     }
 
     .fleet-showcase-grid {
@@ -2917,11 +2733,19 @@ body {
     .fleet-showcase-copy {
         padding: 21px;
     }
+
+    .happy-clients-section {
+        padding-block: 48px;
+    }
+
+    .happy-clients-image {
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
     .fleet-showcase {
-        padding-block: 62px;
+        padding-block: 46px;
     }
 
     .fleet-showcase-heading {
@@ -2930,7 +2754,7 @@ body {
     }
 
     .fleet-showcase-heading h2 {
-        font-size: 38px;
+        font-size: 39px;
     }
 
     .fleet-showcase-heading > p {
@@ -2949,6 +2773,139 @@ body {
 
     .fleet-showcase-copy {
         padding: 20px;
+    }
+
+    .happy-clients-section {
+        padding-block: 42px;
+    }
+
+    .happy-clients-heading {
+        display: block;
+        margin-bottom: 18px;
+    }
+
+    .happy-clients-heading h2 {
+        font-size: 39px;
+    }
+
+    .happy-clients-heading > p {
+        margin-top: 12px;
+        font-size: 12px;
+    }
+}
+
+.why-choose-section {
+    padding-block: 64px;
+    background: var(--white);
+}
+
+.why-choose-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.why-choose-heading h2 {
+    margin: 14px 0 0;
+    font-size: clamp(36px, 4vw, 49px);
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -0.07em;
+}
+
+.why-choose-heading h2 em {
+    color: var(--coral);
+    font-style: normal;
+}
+
+.why-choose-heading > p {
+    max-width: 410px;
+    margin: 0 0 5px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.why-choose-card {
+    min-height: 190px;
+    padding: 23px;
+    border: 1px solid var(--line);
+    background: #f8fbff;
+}
+
+.why-choose-number {
+    color: var(--coral);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.why-choose-card h3 {
+    margin: 24px 0 9px;
+    font-size: 18px;
+    letter-spacing: -0.04em;
+}
+
+.why-choose-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+    .why-choose-section {
+        padding-block: 54px;
+    }
+
+    .why-choose-grid {
+        gap: 12px;
+    }
+
+    .why-choose-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-choose-section {
+        padding-block: 46px;
+    }
+
+    .why-choose-heading {
+        display: block;
+        margin-bottom: 22px;
+    }
+
+    .why-choose-heading h2 {
+        font-size: 39px;
+    }
+
+    .why-choose-heading > p {
+        margin-top: 14px;
+        font-size: 12px;
+    }
+
+    .why-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .why-choose-card {
+        min-height: 0;
+        padding: 19px;
+    }
+
+    .why-choose-card h3 {
+        margin-top: 14px;
     }
 }
 
