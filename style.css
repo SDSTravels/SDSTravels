@@ -2795,15 +2795,11 @@ body {
 }
 
 .why-choose-section {
-    padding-block: 64px;
+    padding-top: 64px;
     background: var(--white);
 }
 
 .why-choose-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 40px;
     margin-bottom: 30px;
 }
 
@@ -2815,14 +2811,22 @@ body {
     letter-spacing: -0.07em;
 }
 
-.why-choose-heading h2 em {
+.why-choose-heading h3 {
+    margin: 8px 0 0;
+    font-size: clamp(24px, 2.8vw, 32px);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.055em;
+}
+
+.why-choose-heading h3 em {
     color: var(--coral);
     font-style: normal;
 }
 
-.why-choose-heading > p {
-    max-width: 410px;
-    margin: 0 0 5px;
+.why-choose-intro > p {
+    max-width: 760px;
+    margin: 14px 0 0;
     color: var(--muted);
     font-size: 13px;
     line-height: 1.75;
@@ -2863,7 +2867,7 @@ body {
 
 @media (max-width: 800px) {
     .why-choose-section {
-        padding-block: 54px;
+        padding-top: 54px;
     }
 
     .why-choose-grid {
@@ -2877,11 +2881,10 @@ body {
 
 @media (max-width: 600px) {
     .why-choose-section {
-        padding-block: 46px;
+        padding-top: 46px;
     }
 
     .why-choose-heading {
-        display: block;
         margin-bottom: 22px;
     }
 
@@ -2889,8 +2892,8 @@ body {
         font-size: 39px;
     }
 
-    .why-choose-heading > p {
-        margin-top: 14px;
+    .why-choose-intro > p {
+        margin-top: 12px;
         font-size: 12px;
     }
 
