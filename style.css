@@ -3316,13 +3316,13 @@ body {
     animation: about-image-enter 1100ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
-.js .about-hero-copy,
-.js .about-hero-visual,
-.js .fleet-showcase-heading,
-.js .fleet-showcase-card,
-.js .leadership-heading,
-.js .leader-card,
-.js .about-commitment-inner {
+.js .about-page .about-hero-copy,
+.js .about-page .about-hero-visual,
+.js .about-page .fleet-showcase-heading,
+.js .about-page .fleet-showcase-card,
+.js .about-page .leadership-heading,
+.js .about-page .leader-card,
+.js .about-page .about-commitment-inner {
     opacity: 0;
 }
 
@@ -3366,14 +3366,14 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .js .about-hero-copy,
-    .js .about-hero-visual,
+    .js .about-page .about-hero-copy,
+    .js .about-page .about-hero-visual,
     .js [data-service-reveal],
-    .js .fleet-showcase-heading,
-    .js .fleet-showcase-card,
-    .js .leadership-heading,
-    .js .leader-card,
-    .js .about-commitment-inner,
+    .js .about-page .fleet-showcase-heading,
+    .js .about-page .fleet-showcase-card,
+    .js .about-page .leadership-heading,
+    .js .about-page .leader-card,
+    .js .about-page .about-commitment-inner,
     .about-hero-slide img,
     .fleet-art img,
     .leader-photo img,
