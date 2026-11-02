@@ -511,25 +511,6 @@ h2 em {
     margin-bottom: 42px;
 }
 
-#about .section-heading h2,
-#services .fleet-showcase-heading h2,
-.why-choose-title {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-#about .section-heading h2::before,
-#services .fleet-showcase-heading h2::before,
-.why-choose-title::before {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 9px;
-    border-radius: 50%;
-    background: var(--coral);
-    content: "";
-}
-
 .section-heading h2 {
     margin: 16px 0 0;
     font-size: clamp(36px, 4vw, 49px);
@@ -565,16 +546,60 @@ h2 em {
     gap: 20px;
 }
 
+#about {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 92% 8%, rgba(8, 127, 232, 0.1), transparent 34%),
+        linear-gradient(135deg, #f3f8ff, #eaf3ff);
+}
+
+#about::after {
+    width: 260px;
+    height: 260px;
+    position: absolute;
+    z-index: -1;
+    right: -120px;
+    bottom: -155px;
+    border: 1px solid rgba(8, 127, 232, 0.16);
+    border-radius: 50%;
+    box-shadow: 0 0 0 28px rgba(8, 127, 232, 0.035), 0 0 0 56px rgba(8, 127, 232, 0.025);
+    content: "";
+}
+
 #about .section-intro {
     width: 100%;
     max-width: none;
     gap: 22px;
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid rgba(8, 44, 112, 0.08);
+    border-left: 4px solid var(--coral);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 22px 55px rgba(8, 44, 112, 0.08);
 }
 
 #about .section-intro > p {
     max-width: 100%;
-    font-size: 15px;
-    line-height: 1.7;
+    color: #435875;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.85;
+}
+
+#about .section-intro .button {
+    margin-top: 2px;
+}
+
+.js #about [data-about-reveal] {
+    opacity: 0;
+}
+
+#about [data-about-reveal].is-revealed {
+    animation: about-section-enter 850ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+#about .section-intro.is-revealed {
+    animation-delay: 150ms;
 }
 
 .service-grid {
@@ -3353,6 +3378,8 @@ body {
     .fleet-art img,
     .leader-photo img,
     .about-commitment-inner,
+    .js #about [data-about-reveal],
+    #about [data-about-reveal].is-revealed,
     [data-service-reveal].is-revealed,
     .services-hero-visual.is-revealed img,
     .service-detail-visual.is-revealed img {

@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add("js");</script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -89,10 +90,10 @@
 
         <section class="section container" id="about">
             <div class="section-heading about-home-heading">
-                <div>
+                <div data-about-reveal>
                     <h2>About Us</h2>
                 </div>
-                <div class="section-intro">
+                <div class="section-intro" data-about-reveal>
                     <p>Since 2019, Sri Divya Sai Travels has grown as a family-run transport business serving organizations and individual travelers. We bring together employee transportation and premium car rental services, with a focus on dependable coordination, passenger comfort, and safety. Our experienced team and diverse fleet help us shape travel solutions around each client’s needs. We take pride in caring for every journey and working to make each trip a positive experience. From daily employee commutes to executive and group travel, we work closely with every client to understand their requirements and deliver a smooth, dependable experience from pickup to drop-off.</p>
                     <a class="button button-coral" href="about.html">Learn More <span aria-hidden="true">↗</span></a>
                 </div>
@@ -329,6 +330,25 @@
         });
 
         logoPreview.addEventListener("click", () => logoPreview.close());
+
+        const aboutRevealTargets = document.querySelectorAll("#about [data-about-reveal]");
+        const revealAboutTarget = (target) => target.classList.add("is-revealed");
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+            aboutRevealTargets.forEach(revealAboutTarget);
+        } else {
+            const aboutRevealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        revealAboutTarget(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
+
+            aboutRevealTargets.forEach((target) => aboutRevealObserver.observe(target));
+        }
     </script>
 </body>
 </html>
