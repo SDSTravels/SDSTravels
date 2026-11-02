@@ -2814,14 +2814,6 @@ body {
     letter-spacing: -0.07em;
 }
 
-.why-choose-title span {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 9px;
-    border-radius: 50%;
-    background: var(--coral);
-}
-
 .why-choose-heading h3 {
     margin: 8px 0 0;
     font-size: clamp(24px, 2.8vw, 32px);
@@ -2833,14 +2825,6 @@ body {
 .why-choose-heading h3 em {
     color: var(--coral);
     font-style: normal;
-}
-
-.why-choose-intro > p {
-    max-width: 760px;
-    margin: 14px 0 0;
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.75;
 }
 
 .why-choose-grid {
