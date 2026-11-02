@@ -179,14 +179,12 @@ img {
 }
 
 .main-nav a,
-.text-link,
-.contact-phone {
+.text-link {
     transition: color 160ms ease;
 }
 
 .main-nav a:hover,
-.text-link:hover,
-.contact-phone:hover {
+.text-link:hover {
     color: var(--coral);
 }
 
@@ -209,6 +207,21 @@ img {
 
 .button span {
     font-size: 16px;
+}
+
+.button-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+.button-icon-whatsapp {
+    object-fit: contain;
 }
 
 .button-dark {
@@ -822,13 +835,6 @@ h2 em {
     background: #0668c8;
 }
 
-.contact-phone {
-    display: block;
-    margin-top: 13px;
-    color: var(--muted);
-    font-size: 10px;
-}
-
 .contact-star {
     position: absolute;
     right: 0;
@@ -836,6 +842,38 @@ h2 em {
     color: rgba(8, 44, 112, 0.08);
     font-size: 190px;
     line-height: 1;
+}
+
+.whatsapp-float {
+    width: 56px;
+    height: 56px;
+    position: fixed;
+    z-index: 20;
+    right: 24px;
+    bottom: 24px;
+    display: grid;
+    place-items: center;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: #25d366;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.whatsapp-float img {
+    width: 34px;
+    height: 34px;
+    display: block;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    background: #1fbd5a;
+}
+
+.whatsapp-float:focus-visible {
+    outline: 3px solid var(--ink);
+    outline-offset: 3px;
 }
 
 .site-footer {
@@ -3782,7 +3820,8 @@ body {
     .sustainability-framework-visual img,
     .fleet-art img,
     .leader-photo img,
-    .sustainability-pillar {
+    .sustainability-pillar,
+    .whatsapp-float {
         transition: none;
     }
 
@@ -3792,7 +3831,8 @@ body {
     .sustainability-pillar:hover,
     .sustainability-pillar:hover .sustainability-pillar-image img,
     .fleet-art:hover img,
-    .leader-photo:hover img {
+    .leader-photo:hover img,
+    .whatsapp-float:hover {
         transform: none;
     }
 }
