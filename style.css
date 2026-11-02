@@ -590,18 +590,6 @@ h2 em {
     margin-top: 2px;
 }
 
-.js #about [data-about-reveal] {
-    opacity: 0;
-}
-
-#about [data-about-reveal].is-revealed {
-    animation: about-section-enter 850ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-#about .section-intro.is-revealed {
-    animation-delay: 150ms;
-}
-
 .service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -876,7 +864,9 @@ h2 em {
 }
 
 .footer-brand .brand-title {
+    color: #fff;
     font-size: 15px;
+    font-weight: 800;
 }
 
 .footer-address {
@@ -3616,6 +3606,98 @@ body {
     }
 }
 
+@keyframes home-slide-right {
+    from {
+        opacity: 0;
+        transform: translateX(34px);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes home-pop-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes home-image-zoom {
+    from {
+        opacity: 0;
+        clip-path: inset(8% 5% 8% 5% round 18px);
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0);
+        transform: scale(1);
+    }
+}
+
+.js [data-home-reveal] {
+    opacity: 0;
+}
+
+.js [data-home-reveal="left"].is-revealed {
+    animation: about-heading-enter 850ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js [data-home-reveal="right"].is-revealed {
+    animation: home-slide-right 850ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js [data-home-reveal="card"].is-revealed {
+    animation: about-card-enter 800ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js [data-home-reveal="pop"].is-revealed {
+    animation: home-pop-enter 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js [data-home-reveal="image"].is-revealed {
+    animation: about-image-enter 1000ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js [data-home-reveal="zoom"].is-revealed {
+    animation: home-image-zoom 1050ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.js .trust-item:nth-child(2).is-revealed,
+.js .fleet-showcase-card:nth-child(2).is-revealed,
+.js .why-choose-card:nth-child(2).is-revealed,
+.js .mobility-card:nth-child(2).is-revealed,
+.js .technology-steps article:nth-child(2).is-revealed {
+    animation-delay: 120ms;
+}
+
+.js .trust-item:nth-child(3).is-revealed,
+.js .fleet-showcase-card:nth-child(3).is-revealed,
+.js .why-choose-card:nth-child(3).is-revealed,
+.js .mobility-card:nth-child(3).is-revealed,
+.js .technology-steps article:nth-child(3).is-revealed {
+    animation-delay: 240ms;
+}
+
+.js .trust-item:nth-child(4).is-revealed {
+    animation-delay: 360ms;
+}
+
+.js .trust-item:nth-child(5).is-revealed {
+    animation-delay: 480ms;
+}
+
 .about-hero-visual.is-revealed .about-hero-slide.is-active img,
 .fleet-showcase-card.is-revealed .fleet-art img,
 .leader-card.is-revealed .leader-photo img {
@@ -3680,12 +3762,12 @@ body {
     .js .about-page .leadership-heading,
     .js .about-page .leader-card,
     .js .about-page .about-commitment-inner,
+    .js [data-home-reveal],
+    .js [data-home-reveal].is-revealed,
     .about-hero-slide img,
     .fleet-art img,
     .leader-photo img,
     .about-commitment-inner,
-    .js #about [data-about-reveal],
-    #about [data-about-reveal].is-revealed,
     [data-service-reveal].is-revealed,
     .services-hero-visual.is-revealed img,
     .service-detail-visual.is-revealed img {

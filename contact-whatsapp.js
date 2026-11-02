@@ -13,6 +13,7 @@ document.querySelectorAll(".footer-contact form").forEach((form) => {
                 .map(([name, value]) => `${name}: ${String(value).trim()}`)
         ].join("\n");
 
+        form.reset();
         window.location.assign(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
     });
 });
